@@ -87,6 +87,9 @@
 </template>
 
 <script>
+
+import { getNumber, getUnit, getBoolean, getRandomColor, getContrast } from '../utilities';
+
 export default {
     props: {
         name: {
@@ -102,7 +105,8 @@ export default {
 
     data(){
         return {
-            data: {}
+            data: {},
+            SIZE: 36
         }
     },
 
