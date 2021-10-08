@@ -74,6 +74,10 @@ export default {
             type: String, 
             required: true
         },
+        size: {
+            type: Number,
+            required: true
+        },
         color: {
             type: Array,
             required: true

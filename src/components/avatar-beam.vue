@@ -91,12 +91,17 @@
 import { getNumber, getUnit, getBoolean, getRandomColor, getContrast } from '../utilities';
 
 export default {
+
+    name: 'avatar-beam',
     props: {
         name: {
             type: String,
             required: true
         },
-
+        size: {
+            type: Number,
+            required: true
+        },
         colors: {
             type: Array, 
             required: true
