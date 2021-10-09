@@ -31,18 +31,17 @@ export default {
     
     data(){
       return {
-        variantsArray: ["bauhaus", "beam", "marble", "pixels", "ring", "sunset"],
+        variants: ["bauhaus", "beam", "marble", "pixels", "ring", "sunset"],
         _variant: "marble"
       }
     },
 
     beforeMount() {
      
-       if(this.variantsArray.includes(this.variant)){
+       if(this.variants.includes(this.variant)){
          this._variant =  this.variant;
        }
-
-       console.log(this._variant)
+       
     },
 
     computed: {
