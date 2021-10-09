@@ -1,5 +1,5 @@
 <template>
-   <svg
+    <svg
       :viewBox="'0 0 ' + SIZE + ' ' + SIZE"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -10,12 +10,12 @@
         <rect :width="SIZE" :height="SIZE" :rx="square ?  undefined : SIZE * 2" fill="white" />
       </mask>
       <g mask="url(#mask__sunset)">
-        <path :fill="'url(#gradient_paint0_linear_' + name + ')'" d="M0 0h80v40H0z" />
-        <path :fill="'url(#gradient_paint1_linear_' + name + ')'" d="M0 40h80v40H0z" />
+        <path :fill="'url(#gradient_paint0_linear_' + _name + ')'" d="M0 0h80v40H0z" />
+        <path :fill="'url(#gradient_paint1_linear_' + _name + ')'" d="M0 40h80v40H0z" />
       </g>
       <defs>
         <linearGradient
-          :id="'gradient_paint0_linear_' + name"
+          :id="'gradient_paint0_linear_' + _name"
           :x1="SIZE / 2"
           :y1="0"
           :x2="SIZE / 2"
@@ -26,7 +26,7 @@
           <stop :offset="1" :stopColor="properties[1].color" />
         </linearGradient>
         <linearGradient
-          :id="'gradient_paint1_linear_' + name"
+          :id="'gradient_paint1_linear_' + _name"
           :x1="SIZE / 2"
           :y1="SIZE / 2"
           :x2="SIZE / 2"
@@ -71,28 +71,34 @@ export default {
         return {
             ELEMENTS: 4,
             SIZE: 80,
-            properties: null
+            _name: "",
+            properties: {}
         }
     },
 
     beforeMount() {
+      
         this.properties = this.generateColors(this.name, this.colors);
+        this._name = this.name.replace(/\s/g, '');
+
     },
 
     methods: {
-        
-        generateColors(name, colors) {
-            const numFromName = getNumber(name);
-            const range = colors && colors.length;
 
-            const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({
-                color: getRandomColor(numFromName % (i + 13), colors, range),
-            }));
+      generateColors(name, colors) {
 
-            return elementsProperties;
-        }
+        const numFromName = getNumber(name);
+        const range = colors && colors.length;
+
+        const elementsProperties = Array.from({ length: this.ELEMENTS }, (_, i) => ({
+          color: getRandomColor(numFromName + i, colors, range),
+        }));
+
+        return elementsProperties;
+      }
 
     }
+
 }
 </script>
 

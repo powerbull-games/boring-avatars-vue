@@ -27,7 +27,7 @@
 import { getNumber, getRandomColor } from '../utilities';
 
 export default {
-   name: 'avatar-pixels',
+   name: 'avatar-ring',
     props: {
         name: {
             type: String,

@@ -1,5 +1,5 @@
 <template>
-      <svg
+    <svg
       :viewBo:x="'0 0 ' + SIZE + ' ' + SIZE"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@
         :width="SIZE"
         :height="SIZE"
       >
-        <rect :width="SIZE" :height="SIZE" :r:x="square ?  undefined : SIZE * 2" fill="white" />
+        <rect :width="SIZE" :height="SIZE" :rx="square ?  undefined : SIZE * 2" fill="white" />
       </mask>
       <g mask="url(#mask0)">
         <rect :width="10" :height="10" :fill="properties[0].color" />
@@ -127,7 +127,7 @@ export default {
     },
 
     methods: {
-        
+            
         generateColors(name, colors) {
             const numFromName = getNumber(name);
             const range = colors && colors.length;
@@ -138,7 +138,6 @@ export default {
 
             return elementsProperties;
         }
-
     }
 }
 </script>
