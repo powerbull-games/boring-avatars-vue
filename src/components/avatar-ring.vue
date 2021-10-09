@@ -67,7 +67,7 @@ export default {
         generateColors(colors, name) {
             const numFromName = getNumber(name);
             const range = colors && colors.length;
-            const colorsShuffle = Array.from({ length: COLORS }, (_, i) =>
+            const colorsShuffle = Array.from({ length: this.COLORS }, (_, i) =>
                 getRandomColor(numFromName + (i + 1), colors, range),
             );
             const iconColors = [];

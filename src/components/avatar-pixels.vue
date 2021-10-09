@@ -132,7 +132,7 @@ export default {
             const numFromName = getNumber(name);
             const range = colors && colors.length;
 
-            const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({
+            const elementsProperties = Array.from({ length: this.ELEMENTS }, (_, i) => ({
                 color: getRandomColor(numFromName % (i + 13), colors, range),
             }));
 
