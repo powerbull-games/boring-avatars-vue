@@ -81,6 +81,10 @@ export default {
         colors: {
             type: Array,
             required: true
+        },
+        square: {
+          type: Boolean,
+          required: true
         }
     },
 
@@ -93,6 +97,7 @@ export default {
     },
 
     beforeMount() {
+      console.log(this.colors)
         this.properties = this.generateColors(this.name, this.colors);
     },
     methods: {
@@ -100,10 +105,10 @@ export default {
             const numFromName = getNumber(name);
             const range = colors && colors.length;
 
-            const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({
+            const elementsProperties = Array.from({ length: this.ELEMENTS }, (_, i) => ({
                 color: getRandomColor(numFromName + i, colors, range),
-                translateX: getUnit(numFromName * (i + 1), SIZE / 2 - (i + 17), 1),
-                translateY: getUnit(numFromName * (i + 1), SIZE / 2 - (i + 17), 2),
+                translateX: getUnit(numFromName * (i + 1), this.SIZE / 2 - (i + 17), 1),
+                translateY: getUnit(numFromName * (i + 1), this.SIZE / 2 - (i + 17), 2),
                 rotate: getUnit(numFromName * (i + 1), 360),
                 isSquare: getBoolean(numFromName, 2),
             }));

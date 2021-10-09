@@ -1,5 +1,5 @@
 <template>
-      <component :is="loadComponent" v-bind={...props}></component>
+      <component :is="loadComponent" v-bind="{name, size, colors, square,...$attrs}"></component>
 </template>
 
 <script>
@@ -31,19 +31,23 @@ export default {
     
     data(){
       return {
-        variantsArray: ["bauhaus", "beam", "marble", "pixels", "ring", "sunset"]
+        variantsArray: ["bauhaus", "beam", "marble", "pixels", "ring", "sunset"],
+        _variant: "marble"
       }
     },
 
     beforeMount() {
-       if(!(this.variant in this.variantsArray)){
-         this.variant = "marble"
+     
+       if(this.variantsArray.includes(this.variant)){
+         this._variant =  this.variant;
        }
+
+       console.log(this._variant)
     },
 
     computed: {
       loadComponent(){
-        return defineAsyncComponent(() => import(`./avatar-${this.variant}.vue`))
+        return defineAsyncComponent(() => import(`./avatar-${this._variant}.vue`))
       }
     }
 }

@@ -6,8 +6,8 @@
       :width="size"
       :height="size"
     >
-      <mask id="mask__marble" maskUnits="userSpaceOnUse" x={0} y={0} :width="SIZE" :height="SIZE">
-        <rect :width="SIZE" :height="SIZE" :rx="props.square ?  undefined : SIZE * 2" fill="white" />
+      <mask id="mask__marble" maskUnits="userSpaceOnUse" :x="0" :y="0" :width="SIZE" :height="SIZE">
+        <rect :width="SIZE" :height="SIZE" :rx="square ?  undefined : SIZE * 2" fill="white" />
       </mask>
       <g mask="url(#mask__marble)">
         <rect :width="SIZE" :height="SIZE" :rx="2" :fill="properties[0].color" />
@@ -84,6 +84,11 @@ export default {
         colors: {
             type: Array, 
             required: true
+        },
+
+        square: {
+          type: Boolean,
+          required: true
         }
     },
 
@@ -96,7 +101,8 @@ export default {
     },
 
     beforeMount() {
-        this.properties = this.generateColors(this.name, this.colors);
+      console.log(this.props)
+      this.properties = this.generateColors(this.name, this.colors);
     },
 
     methods: {
@@ -105,11 +111,11 @@ export default {
             const numFromName = getNumber(name);
             const range = colors && colors.length;
 
-            const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({
+            const elementsProperties = Array.from({ length: this.ELEMENTS }, (_, i) => ({
                 color: getRandomColor(numFromName + i, colors, range),
-                translateX: getUnit(numFromName * (i + 1), SIZE / 10, 1),
-                translateY: getUnit(numFromName * (i + 1), SIZE / 10, 2),
-                scale: 1.2 + getUnit(numFromName * (i + 1), SIZE / 20) / 10,
+                translateX: getUnit(numFromName * (i + 1), this.SIZE / 10, 1),
+                translateY: getUnit(numFromName * (i + 1), this.SIZE / 10, 2),
+                scale: 1.2 + getUnit(numFromName * (i + 1), this.SIZE / 20) / 10,
                 rotate: getUnit(numFromName * (i + 1), 360, 1),
             }));
 

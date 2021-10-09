@@ -7,7 +7,7 @@
       :height="size"
     >
       <mask id="mask__beam" maskUnits="userSpaceOnUse" :x="0" :y="0" :width="SIZE" :height="SIZE">
-        <rect :width="SIZE" :height="SIZE" :rx="props.square ?  undefined : SIZE * 2" fill="white" />
+        <rect :width="SIZE" :height="SIZE" :rx="square ?  undefined : SIZE * 2" fill="white" />
       </mask>
       <g mask="url(#mask__beam)">
         <rect :width="SIZE" :height="SIZE" :fill="data.backgroundColor" />
@@ -105,6 +105,11 @@ export default {
         colors: {
             type: Array, 
             required: true
+        },
+        
+        square: {
+          type: Boolean,
+          required: true
         }
     },
 
@@ -125,7 +130,7 @@ export default {
             const range = colors && colors.length;
             const wrapperColor = getRandomColor(numFromName, colors, range);
             const preTranslateX = getUnit(numFromName, 10, 1);
-            const wrapperTranslateX = preTranslateX < 5 ? preTranslateX + SIZE / 9 : preTranslateX;
+            const wrapperTranslateX = preTranslateX < 5 ? preTranslateX + this.SIZE / 9 : preTranslateX;
             const preTranslateY = getUnit(numFromName, 10, 2);
             const wrapperTranslateY = preTranslateY < 5 ? preTranslateY + SIZE / 9 : preTranslateY;
 
