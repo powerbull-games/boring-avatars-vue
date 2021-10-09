@@ -57,7 +57,7 @@ export default {
     },
 
     beforeMount() {
-        this.cellColors = generateColors(this.colors, this.name);
+        this.cellColors = this.generateColors(this.colors, this.name);
     },
 
     methods: {
