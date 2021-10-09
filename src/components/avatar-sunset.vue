@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { getNumber, getRandomColor } from '../utilities';
+
 export default {
     name: 'avatar-sunset',
     props: {

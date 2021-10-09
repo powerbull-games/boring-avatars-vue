@@ -78,7 +78,7 @@ export default {
             type: Number,
             required: true
         },
-        color: {
+        colors: {
             type: Array,
             required: true
         }

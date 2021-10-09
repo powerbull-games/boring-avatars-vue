@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import Avatar from './src/Avatar.vue';
+import Avatar from './components/avatar.vue';
 
 export default { 
     install(app, options) {
