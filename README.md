@@ -16,13 +16,13 @@ It is a direct port of the React library https://github.com/boringdesigners/bori
 ## Install
 
 ```
-yarn add boring-avatars-vue
+yarn add @powerbull/boring-avatars-vue
 ```
 
 or
 
 ```
-npm install boring-avatars-vue
+npm install @powerbull/boring-avatars-vue
 ```
 
 ## Usage
