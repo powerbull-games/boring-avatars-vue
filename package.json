@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/powerbull-games/boring-avatar-vue.git"
+    "url": "git+https://github.com/powerbull-games/boring-avatars-vue.git"
   },
   "keywords": [
     "vue-avatars",
@@ -22,7 +22,7 @@
   "author": "Powerbull Games<hello@powerbull.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/powerbull-games/boring-avatar-vue/issues"
+    "url": "https://github.com/powerbull-games/boring-avatars-vue/issues"
   },
-  "homepage": "https://github.com/powerbull-games/boring-avatar-vue#readme"
+  "homepage": "https://github.com/powerbull-games/boring-avatars-vue#readme"
 }
