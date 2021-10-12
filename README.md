@@ -7,10 +7,14 @@ It is a direct port of the React library https://github.com/boringdesigners/bori
 
 ![boring avatars preview](https://github.com/boringdesigners/boring-avatars/blob/master/public/boring-avatars-preview.png?raw=true)
 
-<a href="https://www.npmjs.com/package/boring-avatars-vue">
+<a href="https://npmjs.org/package/@powerbull/boring-avatars-vue">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![NPM Version](https://badgen.net/npm/v/@powerbull/boring-avatars-vue)](https://npmjs.org/package/@powerbull/boring-avatars-vue)
+
+[![Size](https://badgen.net/bundlephobia/minzip/@powerbull/boring-avatars-vue)](https://npmjs.org/package/@powerbull/boring-avatars-vue)
+   
 </a>
 
 ## Install
