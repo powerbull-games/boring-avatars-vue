@@ -1,5 +1,5 @@
 {
-  "name": "boring-avatars-vue",
+  "name": "@powerbull-games/boring-avatars-vue",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PowerBullGames/boring-avatar-vue.git"
+    "url": "git+https://github.com/powerbull-games/boring-avatar-vue.git"
   },
-  "keywords": ["vue-avatars","boring-avatars","vue", "boring-avatars-vue","vue3"],
-  "author": "PowerBull<hello@powerbull.net>",
+  "keywords": ["vue-avatars","boring-avatars","vue", "boring-avatars-vue","vue3", "Powerbull", "PowerBull Games"],
+  "author": "Powerbull Games<hello@powerbull.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PowerBullGames/boring-avatar-vue/issues"
+    "url": "https://github.com/powerbull-games/boring-avatar-vue/issues"
   },
-  "homepage": "https://github.com/PowerBullGames/boring-avatar-vue#readme"
+  "homepage": "https://github.com/powerbull-games/boring-avatar-vue#readme"
 }
